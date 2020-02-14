@@ -16,7 +16,7 @@ mkdir -p $(dirname $PROFILE_PATH)
 
 echo "-----> Fetching and vendoring p7zip"
 echo "       Using p7zip version: 16.02"
-curl https://sourceforge.net/projects/p7zip/files/p7zip/16.02/p7zip_16.02_x86_linux_bin.tar.bz2/download -L -s -o - | tar xzf - -C "$VENDOR_DIR"
+curl https://sourceforge.net/projects/p7zip/files/p7zip/16.02/p7zip_16.02_x86_linux_bin.tar.bz2/download -L -s -o - | tar xjf - -C "$VENDOR_DIR"
 mv "$VENDOR_DIR/p7zip_16.02" "$VENDOR_DIR/p7zip"
 
 echo "export PATH=\$PATH:/app/vendor/p7zip/bin" >> $PROFILE_PATH
